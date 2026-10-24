@@ -54,11 +54,11 @@ pip install -r requirements.txt
 ```
 
 ## Usage
-adicionar as instruções quando a ferramenta estiver implementada
+Add the instructions once the tool has been implemented
 
 ## Autores
-- Ana Beatriz
+- Ana Beatriz Brayner 
 - Mari Anne Merlotto
 
 ## License
-definir
+To be determined 
