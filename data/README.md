@@ -10,6 +10,7 @@
 | Title | RNA-seq profiling of tubulointerstitial tissue reveals a potential therapeutic role of dual anti-phosphatase 1 in kidney diseases |
 | Repository | NCBI Gene Expression Omnibus (GEO) |
 | Organism | *Homo sapiens* |
+| Tissue | Kidney (renal tubulointerstitial tissue) |
 | Data type | RNA-seq |
 | Reference genome | GRCh37.p13 |
 | Data format | .tsv (tab-separated values) |
