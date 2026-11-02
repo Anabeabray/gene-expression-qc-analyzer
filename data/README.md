@@ -2,16 +2,17 @@
 
 ## 1. Dataset Information
 
-| Attribute  | Description |
+| Attribute | Description |
 | :--------  | :---------- |
-| Dataset ID | GSE175759   |
-| Status | 	Public on May 02, 2022 |
+| Dataset ID | GSE175759 |
+| Status | Public on May 02, 2022 |
+| Contributor(s) | Park S, Lee H, Yang S, Kim D, Lee S, Lee J, Choi M |
 | Title | RNA-seq profiling of tubulointerstitial tissue reveals a potential therapeutic role of dual anti-phosphatase 1 in kidney diseases |
-| Repository          | NCBI Gene Expression Omnibus (GEO) |
-| Organism            | *Homo sapiens* |
-| Data type           | RNA-seq |
-| Reference genome    | GRCh38.p13 |
-| Data format         | .tsv (tab-separated values) |
+| Repository | NCBI Gene Expression Omnibus (GEO) |
+| Organism | *Homo sapiens* |
+| Data type | RNA-seq |
+| Reference genome | GRCh37.p13 |
+| Data format | .tsv (tab-separated values) |
 | Data representation | Raw gene expression counts |
 
 ## 2. Data Source
@@ -20,7 +21,7 @@ The dataset was obtained from the **NCBI Gene Expression Omnibus (GEO)**.
 
 - **GEO accession:** GSE175759
 - **Dataset page:** [https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE175759](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE175759)
-- Associated article: [RNA-seq profiling of tubulointerstitial tissue reveals a potential therapeutic role of dual anti-phosphatase 1 in glomerulonephritis](https://pubmed.ncbi.nlm.nih.gov/35488446/)
+- **Associated article:** [RNA-seq profiling of tubulointerstitial tissue reveals a potential therapeutic role of dual anti-phosphatase 1 in glomerulonephritis](https://pubmed.ncbi.nlm.nih.gov/35488446/)
 - **File:** `GSE175759_raw_counts_GRCh38.p13_NCBI.tsv.gz`
 
 ## 3. Experimental Design
@@ -28,16 +29,16 @@ The study investigates gene expression in renal tubulointerstitial tissue.
 
 The study comprises 87 samples:
 
-| Group   | Number of samples |
+| Group | Number of samples |
 | :------ | ----------------: |
-| IgA nephropathy    |    43 |
+| IgA nephropathy | 43 |
 | *Diabetes mellitus* nephropathy | 3 |
 | Focal segmental glomerulosclerosis | 3 |
 | Lupus nephritis | 3 |
 | Membranous nephropathy | 4 |
 | Minimal change disease | 9 |
-| Control |                22 |
-| Total   |                87 |
+| Control | 22 |
+| Total   | 87 |
 
 - The 3 outliers which were not included in the main analysis were also uploaded in the database.
 
