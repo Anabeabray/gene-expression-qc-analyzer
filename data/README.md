@@ -47,8 +47,6 @@ The study comprises 87 samples:
 
 The file `GSE175759_raw_counts_GRCh38.p13_NCBI.tsv.gz` contains a gene expression count matrix.
 
-CHECK IF THE INFOS BELOW ARE CORRECT
-
 - Rows represent genes.
 - Columns represent biological samples.
 - Gene identifiers are provided in the first column.
@@ -75,9 +73,7 @@ CHECK IF THIS IS THE WORKFLOW WE WILL FOLLOW:
 
 ## 6. Data Availability
 
-The dataset is publicly available through the **NCBI GEO** repository.
-
-The original compressed file is not included in this repository. Users should download it directly from GEO.
+The dataset is publicly available through the **NCBI GEO** repository and it is also avaible in this directory.
 
 ## 7. Reference
 
