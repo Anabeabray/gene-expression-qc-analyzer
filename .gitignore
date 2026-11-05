@@ -221,6 +221,3 @@ __marimo__/
 
 # Visual Studio Code
 .vscode/
-
-# data archive
-data/*.tsv.gz
