@@ -4,9 +4,16 @@ from src.data_loader import data            #import our matriz
 from src.filtering import filter_low_expression
 from src.filtering_summary import summarize_filtering, save_filtering_summary
 from src.visualization import plot_filtering_summary
+from src.normalization import calculate_cpm, log2_transform
 
 #filtering
 filtered_counts = filter_low_expression(data)
+
+# normalization
+normalized_cpm = calculate_cpm(filtered_counts)
+normalized_log2_cpm = log2_transform(normalized_cpm)
+
+
 
 #filtering summary
 summary = summarize_filtering(data, filtered_counts)
@@ -30,9 +37,23 @@ save_filtering_summary(
     "results/filtered_counts.csv"
 )
 
+#save normalized matrices
+normalized_cpm.to_csv("results/normalized_cpm.csv")
+normalized_log2_cpm.to_csv("results/normalized_log2_cpm.csv")
+
 #generate filtering plot
 plot_filtering_summary(
     summary,
     "results/filtered_counts.png"
 )
+
+
+
+#normalization summary
+print("\nNormalized CPM matrix dimensions:")
+print(normalized_cpm.shape)
+
+print("\nLog2(CPM + 1) matrix dimensions:")
+print(normalized_log2_cpm.shape)
+
 
