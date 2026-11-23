@@ -33,4 +33,32 @@ def plot_filtering_summary(summary, output_path):
     plt.savefig(output_path, dpi=300)       #save the plot with specifc resolution (dpi=300)
     plt.close()                             #close the plot to free up memory and avoid displaying it in interactive environments
 
+def plot_normalization_boxplots(counts, cpm, log2_cpm, output_path):
+    """
+    Compare gene expression distributions before and after normalization.
+    """
+
+    fig, axes = plt.subplots(1, 3, figsize=(20, 6))
+
+    matrices = [
+        (counts, "Filtered counts"),
+        (cpm, "CPM"),
+        (log2_cpm, "log2(CPM + 1)")
+    ]
+
+    for ax, (matrix, title) in zip(axes, matrices):
+        ax.boxplot(matrix.values, showfliers=False)
+        ax.set_title(title)
+        ax.set_xlabel("Samples")
+        ax.set_ylabel("Expression values")
+
+    fig.suptitle(
+        "Gene Expression Distributions Before and After Normalization"
+    )
+
+    plt.tight_layout()
+    fig.savefig(output_path, dpi=300, bbox_inches="tight")
+    plt.close(fig)
+
+    
 
