@@ -51,6 +51,7 @@ def plot_normalization_boxplots(counts, cpm, log2_cpm, output_path):
         ax.set_title(title)
         ax.set_xlabel("Samples")
         ax.set_ylabel("Expression values")
+        ax.tick_params(axis="x", labelbottom=False)
 
     fig.suptitle(
         "Gene Expression Distributions Before and After Normalization"
@@ -60,5 +61,5 @@ def plot_normalization_boxplots(counts, cpm, log2_cpm, output_path):
     fig.savefig(output_path, dpi=300, bbox_inches="tight")
     plt.close(fig)
 
-    
+
 
