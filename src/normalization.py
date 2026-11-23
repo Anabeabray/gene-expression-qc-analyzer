@@ -52,8 +52,6 @@ def calculate_cpm(counts):
 
 
 
-
-
 def log2_transform(cpm):
     """
     Apply log2(CPM + 1) transformation.
