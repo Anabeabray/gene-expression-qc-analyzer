@@ -62,4 +62,24 @@ def plot_normalization_boxplots(counts, cpm, log2_cpm, output_path):
     plt.close(fig)
 
 
+def plot_library_sizes(library_sizes, output_path):
+    
+    #Plot the library size of each sample.
+    
+    fig, ax = plt.subplots(figsize=(18, 6))
+
+    values = library_sizes / 1_000_000
+
+    ax.bar(library_sizes.index, values)
+
+    ax.set_title("Library Size per Sample")
+    ax.set_xlabel("Samples")
+    ax.set_ylabel("Library Size (millions of counts)")
+
+    ax.tick_params(axis="x", rotation=90, labelsize=6)
+
+    plt.tight_layout()
+    fig.savefig(output_path, dpi=300, bbox_inches="tight")
+    plt.close(fig)
+
 
