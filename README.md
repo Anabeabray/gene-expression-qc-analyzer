@@ -9,23 +9,14 @@ A Python tool for gene expression data preprocessing and quality control
 The project aims to provide a simple and reproducible workflow for checking data quality, filtering lowly expressed genes, normalizing counts using *Counts Per Million (CPM)*, and visualizing gene expression distributions.
 
 ## Features
-1. Validate RNA-seq count matrices.
-2. Identify potential data inconsistencies.
-3. Filter genes with low expression.
-4. Normalize counts using CPM.
-5. Apply log2(CPM + 1) transformation.
-6. Generate plots to support quality control and data exploration.
-7. Planned Features
-8. Input validation and data loading.
-9. Low-expression gene filtering.
-10. CPM normalization.
-11. Log-transformation of expression values.
-12. Library size visualization.
-13. Expression distribution plots.
-14. Sample correlation heatmap.
-15. Export of processed data and figures.
-
-*Note: These features are planned and may not all be implemented yet.*
+1. Validate RNA-seq count matrices;
+2. Identify potential data inconsistencies;
+3. Filter genes with low expression;
+4. Normalize counts using CPM;
+5. Apply log2(CPM + 1) transformation;
+6. Generate a filtering summary;
+7. Visualize filtering results;
+8. Export processed data and figures.
 
 ## Technologies
 - Python
@@ -43,7 +34,6 @@ git clone https://github.com/Anabeabray/gene-expression-qc-analyzer.git
 ```
 
 Navigate to the project directory:
-
 ```bash
 cd gene-expression-qc-analyzer
 ```
@@ -52,9 +42,27 @@ Install the dependecies using the *requirements.txt* file, once available:
 ```bash
 pip install -r requirements.txt
 ```
+Make sure the input count matrix is available in the data/ directory before running the pipeline.
 
 ## Usage
-Add the instructions once the tool has been implemented
+### 1. Prepare your input data
+Place your gene expression count matrix in the data/ directory.
+
+The input matrix should contain:
+- Genes as rows.
+- Samples as columns.
+- Raw gene expression counts as values.
+- Gene identifiers as row identifiers.
+
+*Supported input formats: CSV and TSV.*
+
+### 2. Run the pipeline
+Execute the main script, providing the path to your input matrix:
+```bash
+python main.py data/my_gene_counts.csv
+```
+### 3. Output files
+Processed matrices, filtering summaries, and visualizations are automatically saved in the results/ directory.
 
 ## Autores
 - Ana Beatriz Brayner 

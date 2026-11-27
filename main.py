@@ -1,5 +1,3 @@
-print("Gene Expression QC Analyzer")
-
 import os
 
 from src.data_loader import data
@@ -10,6 +8,8 @@ from src.visualization import plot_filtering_summary
 
 
 def main():
+
+    print("Gene Expression QC Analyzer")
 
     # Create results directory if it does not exist
     os.makedirs("results", exist_ok=True)
@@ -43,13 +43,13 @@ def main():
     save_filtering_summary(
     summary,
     "results/filtering_summary.csv"
-)
+    )
 
     # 8. Generate filtering plot
     plot_filtering_summary(
     summary,
     "results/filtering_summary.png"
-)
+    )
 
     print("All processing steps completed successfully.")
 
