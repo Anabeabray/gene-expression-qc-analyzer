@@ -5,6 +5,7 @@ from src.filtering import filter_low_expression
 from src.filtering_summary import summarize_filtering, save_filtering_summary
 from src.visualization import plot_filtering_summary
 from src.normalization import calculate_cpm, log2_transform
+from src.correlation import calculate_sample_correlation, plot_correlation_heatmap
 
 #filtering
 filtered_counts = filter_low_expression(data)
@@ -13,6 +14,14 @@ filtered_counts = filter_low_expression(data)
 normalized_cpm = calculate_cpm(filtered_counts)
 normalized_log2_cpm = log2_transform(normalized_cpm)
 
+#sample correlation
+correlation_matrix = calculate_sample_correlation(normalized_log2_cpm)
+
+#generating correlation heatmap
+plot_correlation_heatmap(
+    correlation_matrix,
+    "results/correlation_heatmap.png"
+)
 
 
 #filtering summary
@@ -55,5 +64,3 @@ print(normalized_cpm.shape)
 
 print("\nLog2(CPM + 1) matrix dimensions:")
 print(normalized_log2_cpm.shape)
-
-

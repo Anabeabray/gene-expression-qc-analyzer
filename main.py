@@ -5,6 +5,8 @@ import os
 from src.data_loader import data
 from src.filtering import filter_low_expression
 from src.normalization import calculate_cpm, log2_transform
+from src.filtering_summary import summarize_filtering, save_filtering_summary
+from src.visualization import plot_filtering_summary
 
 
 def main():
@@ -21,18 +23,33 @@ def main():
     print("Filtering completed.")
     print("Filtered matrix shape:", filtered_data.shape)
 
-    # 3. Calculate CPM
+    # 3. Generate filtering summary
+    summary = summarize_filtering(data, filtered_data) 
+
+    # 4. Calculate CPM
     cpm_data = calculate_cpm(filtered_data)
     print("CPM normalization completed.")
 
-    # 4. Apply log2 transformation
+    # 5. Apply log2 transformation
     log2_cpm_data = log2_transform(cpm_data)
     print("Log2 transformation completed.")
 
-    # 5. Save processed matrices
+    # 6. Save processed matrices
     filtered_data.to_csv("results/filtered_counts.csv")
     cpm_data.to_csv("results/cpm_counts.csv")
     log2_cpm_data.to_csv("results/normalized_expression.csv")
+
+    # 7. Save filtering summary
+    save_filtering_summary(
+    summary,
+    "results/filtering_summary.csv"
+)
+
+    # 8. Generate filtering plot
+    plot_filtering_summary(
+    summary,
+    "results/filtering_summary.png"
+)
 
     print("All processing steps completed successfully.")
 
